@@ -1,6 +1,6 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    events =  "Verylazy",
+    events = "Verylazy",
     main = "ibl",
     opts = {},
 }

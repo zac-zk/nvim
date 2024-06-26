@@ -1,12 +1,26 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
+    "nvim-treesitter/nvim-treesitter",
     events = "VeryLazy",
     build = ":TSUpdate",
     dependencies = {
         "nvim-treesitter/nvim-treesitter-textobjects",
     },
     opts = {
-        ensure_installed = { "c", "cpp", "bash", "bibtex", "css", "javascript", "json", "latex", "lua", "python", "vim", "xml", "yaml" },
+        ensure_installed = {
+            "c",
+            "cpp",
+            "bash",
+            "bibtex",
+            "css",
+            "javascript",
+            "json",
+            "latex",
+            "lua",
+            "python",
+            "vim",
+            "xml",
+            "yaml",
+        },
         highlight = {
             enable = true,
         },
@@ -22,5 +36,5 @@ return {
                 node_decremental = "grm",
             },
         },
-    }
+    },
 }

@@ -17,9 +17,9 @@ return {
         local lspkind = require("lspkind")
         cmp.setup({
             snippet = {
-                -- REQUIRED - you must specify a snippet engine 
+                -- REQUIRED - you must specify a snippet engine
                 expand = function(args)
-                    require('luasnip').lsp_expand(args.body)
+                    require("luasnip").lsp_expand(args.body)
                 end,
             },
             mapping = {
@@ -28,46 +28,40 @@ return {
                 ["<esc>"] = cmp.mapping.abort(),
                 ["<Return>"] = cmp.mapping.confirm(),
             },
-            sources = cmp.config.sources(
-                {
-                    { name = "nvim_lsp" },
-                    { name = "luasnip" }
-                },
-                {
-                    { name = "buffer" },
-                    { name = "path" }
-                }
-            ),
+            sources = cmp.config.sources({
+                { name = "nvim_lsp" },
+                { name = "luasnip" },
+            }, {
+                { name = "buffer" },
+                { name = "path" },
+            }),
             formatting = {
                 format = lspkind.cmp_format({
                     with_text = true, -- do not show text alongside icons
                     maxwidth = 50,
-                    before = function (entry, vim_item)
+                    before = function(entry, vim_item)
                         --Source 显示提示来源
-                        vim_item.menu = "["..string.upper(entry.source.name).."]"
+                        vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
                         return vim_item
-                    end
-                })
+                    end,
+                }),
             },
         })
-        cmp.setup.cmdline('/', {
+        cmp.setup.cmdline("/", {
             sources = {
-                { name = 'buffer' }
-            }
+                { name = "buffer" },
+            },
         })
-        cmp.setup.cmdline(':', {
-            sources = cmp.config.sources(
-                {
-                    { name = 'path' }
-                },
-                {
-                    { name = 'cmdline' }
-                }
-            )
+        cmp.setup.cmdline(":", {
+            sources = cmp.config.sources({
+                { name = "path" },
+            }, {
+                { name = "cmdline" },
+            }),
         })
         require("luasnip.loaders.from_vscode").lazy_load()
         require("luasnip").config.setup({
             enable_autosnippets = true,
         })
-    end
+    end,
 }

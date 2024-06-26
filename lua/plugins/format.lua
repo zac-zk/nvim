@@ -7,22 +7,21 @@ return {
             log_level = vim.log.levels.WARN,
             filetype = {
                 lua = {
-                    require("formatter.filetypes.lua").stylua
+                    require("formatter.filetypes.lua").stylua,
                 },
                 javascript = {
-                    require("formatter.filetypes.javascript").prettier
+                    require("formatter.filetypes.javascript").prettier,
                 },
                 cpp = {
-                    require("formatter.filetypes.cpp").astyle
+                    require("formatter.filetypes.cpp").astyle,
                 },
                 python = {
-                    require("formatter.filetypes.python").yapf
+                    require("formatter.filetypes.python").yapf,
                 },
                 ["*"] = {
-                    require("formatter.filetypes.any").remove_trailing_whites
-                }
-
-            }
+                    require("formatter.filetypes.any").remove_trailing_whites,
+                },
+            },
         })
-    end
+    end,
 }

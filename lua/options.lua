@@ -21,7 +21,7 @@ opt.smartindent = true
 opt.mouse = "a"
 opt.cursorline = true
 
-opt.showmode=false
+opt.showmode = false
 opt.scrolloff = 8
 opt.completeopt = { "menuone", "noselect" }
 opt.list = true
@@ -47,5 +47,3 @@ opt.termguicolors = true
 opt.updatetime = 200
 opt.wildmode = "longest:full,full"
 opt.winminwidth = 5
-
-
