@@ -12,8 +12,11 @@ return {
                 javascript = {
                     require("formatter.filetypes.javascript").prettier,
                 },
+                c = {
+                    require("formatter.filetypes.c").clangformat,
+                },
                 cpp = {
-                    require("formatter.filetypes.cpp").astyle,
+                    require("formatter.filetypes.cpp").clangformat,
                 },
                 python = {
                     require("formatter.filetypes.python").yapf,
@@ -22,6 +25,10 @@ return {
                     require("formatter.filetypes.any").remove_trailing_whites,
                 },
             },
+        })
+        require("G")
+        G.map({
+            { { "n", "v" }, "<s-i>", "<cmd>Format | retab<cr>", {} },
         })
     end,
 }

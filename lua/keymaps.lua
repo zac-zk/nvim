@@ -27,7 +27,7 @@ G.map({
     { { "n", "v", "i" }, "<c-h>", "<esc>:%s//g<left><left>", opts },
 
     -- format
-    { { "n", "v" }, "<S-i>", "<cmd>Format | retab<CR>", opts },
+    -- { { "n", "v" }, "<S-i>", "<cmd>Format | retab<CR>", opts },
 
     -- 清空一行
     { { "n", "i" }, "<c-u>", "<ESC>cc", opts },
