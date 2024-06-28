@@ -38,7 +38,7 @@ G.map({
     { "v",               "<m-j>",   ":m '>+1<cr>gv",               opts },
 
     -- windows: sp 上下窗口 sv 左右分屏 sc关闭当前 so关闭其他 s方向切换
-    { "n",               "cv",      ":vcp<cr><c-w>w",              opts },
+    { "n",               "sv",      ":vsp<cr><c-w>w",              opts },
     { "n",               "sp",      ":sp<cr><c-w>w",               opts },
     { "n",               "sc",      ":close<cr>",                  opts },
     { "n",               "so",      ":only<cr>",                   opts },
