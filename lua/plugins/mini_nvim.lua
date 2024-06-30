@@ -21,11 +21,11 @@ return {
         require("mini.cursorword").setup({})
         require("mini.comment").setup({})
         require("mini.tabline").setup({})
-        require("mini.map").setup({
-            G.map({
-                { { 'n', 'v' }, '<leader>m', '<cmd>lua MiniMap.toggle()<cr>', opt },
-            })
-        })
+        -- require("mini.map").setup({
+        --     G.map({
+        --         { { 'n', 'v' }, '<leader>m', '<cmd>lua MiniMap.toggle()<cr>', opt },
+        --     })
+        -- })
         require("mini.pick").setup({
             G.map({
                 { { 'n', 'v' }, '<leader>pf', '<cmd>Pick files<cr>',     opt },
@@ -45,5 +45,6 @@ return {
             }
         })
         require("mini.starter").setup({})
+        require("mini.bracketed").setup({})
     end
 }

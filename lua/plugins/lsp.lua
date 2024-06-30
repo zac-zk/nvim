@@ -39,9 +39,9 @@ return {
             { { "n" }, "<leader>a", "<cmd>Lspsaga code_action<cr>" },
             { { "n" }, "<leader>r", "<cmd>Lspsaga rename<cr>" },
             { { "n" }, "<leader>t", "<cmd>Lspsaga term_toggle<cr>" },
-            { { "n" }, "gd",        "<cmd>Lspsaga goto_definition<cr>" },
-            { { "n" }, "pd",        "<cmd>Lspsaga peek_definition<cr>" },
-            { { "n" }, "gD",        "<cmd>lua vim.lsp.buf.declaration()<cr>" },
+            { { "n" }, "<leader>gd",        "<cmd>Lspsaga goto_definition<cr>" },
+            { { "n" }, "<leader>pd",        "<cmd>Lspsaga peek_definition<cr>" },
+            { { "n" }, "<leader>gD",        "<cmd>lua vim.lsp.buf.declaration()<cr>" },
             { { "n" }, "<s-k>",     "<cmd>Lspsaga hover_doc<cr>" },
         })
     end,
