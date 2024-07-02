@@ -26,7 +26,7 @@ return {
             mapping = {
                 ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
                 ["<S-Tab>"] = cmp.mapping.select_prev_item(),
-                ["<esc>"] = cmp.mapping.abort(),
+                ["<Esc>"] = cmp.mapping.abort(),
                 ["<Return>"] = cmp.mapping.confirm(),
             },
             sources = cmp.config.sources({
@@ -60,7 +60,10 @@ return {
                 { name = "cmdline" },
             }),
         })
-        require("luasnip.loaders.from_vscode").lazy_load()
+
+        require("luasnip.loaders.from_vscode").lazy_load({
+            paths = "~/.config/nvim/lua/plugins/snippets"
+        })
         require("luasnip").config.setup({
             enable_autosnippets = true,
         })

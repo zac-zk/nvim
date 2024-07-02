@@ -17,7 +17,7 @@ return {
             },
         })
 
-        local servers = { "bashls", "clangd", "cmake", "lua_ls", "pyright" }
+        local servers = { "bashls", "clangd", "cmake", "lua_ls", "pyright", "markdown_oxide", "jsonls" }
         require("mason-lspconfig").setup({
             ensure_installed = servers,
             automatic_installation = true,
@@ -35,14 +35,14 @@ return {
 
         local G = require("G")
         G.map({
-            { { "n" }, "<leader>=", "<cmd>lua vim.lsp.buf.format()<cr><cmd>retab<cr>" },
-            { { "n" }, "<leader>a", "<cmd>Lspsaga code_action<cr>" },
-            { { "n" }, "<leader>r", "<cmd>Lspsaga rename<cr>" },
-            { { "n" }, "<leader>t", "<cmd>Lspsaga term_toggle<cr>" },
-            { { "n" }, "<leader>gd",        "<cmd>Lspsaga goto_definition<cr>" },
-            { { "n" }, "<leader>pd",        "<cmd>Lspsaga peek_definition<cr>" },
-            { { "n" }, "<leader>gD",        "<cmd>lua vim.lsp.buf.declaration()<cr>" },
-            { { "n" }, "<s-k>",     "<cmd>Lspsaga hover_doc<cr>" },
+            { { "n" }, "<leader>=",  "<Cmd>lua vim.lsp.buf.format()<CR><Cmd>retab<CR>" },
+            { { "n" }, "<leader>a",  "<Cmd>Lspsaga code_action<CR>" },
+            { { "n" }, "<leader>r",  "<Cmd>Lspsaga rename<CR>" },
+            { { "n" }, "<leader>t",  "<Cmd>Lspsaga term_toggle<CR>" },
+            { { "n" }, "<leader>gd", "<Cmd>Lspsaga goto_definition<CR>" },
+            { { "n" }, "<leader>pd", "<Cmd>Lspsaga peek_definition<CR>" },
+            { { "n" }, "<leader>gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>" },
+            { { "n" }, "<S-k>",      "<Cmd>Lspsaga hover_doc<CR>" },
         })
     end,
 }
