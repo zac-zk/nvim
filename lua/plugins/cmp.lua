@@ -67,5 +67,10 @@ return {
         require("luasnip").config.setup({
             enable_autosnippets = true,
         })
+        local G = require("G")
+        G.map({
+            { { 'i', 's' }, "<C-j>", "<Cmd>lua require('luasnip').jump(1)<CR>",  {} },
+            { { 'i', 's' }, "<C-k>", "<Cmd>lua require('luasnip').jump(-1)<CR>", {} },
+        })
     end,
 }
