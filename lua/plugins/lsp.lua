@@ -17,7 +17,7 @@ return {
             },
         })
 
-        local servers = { "bashls", "clangd", "cmake", "lua_ls", "pyright", "markdown_oxide", "jsonls" }
+        local servers = { "bashls", "clangd", "cmake", "lua_ls", "pyright", "markdown_oxide", "jsonls", "lemminx" }
         require("mason-lspconfig").setup({
             ensure_installed = servers,
             automatic_installation = true,
