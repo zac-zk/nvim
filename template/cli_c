@@ -1,0 +1,9 @@
+#!/bin/bash
+
+project=$1
+
+mkdir ${project}
+cd ${project}
+mkdir include src
+cp ~/.config/nvim/template/CMakeLists.txt ~/.config/nvim/template/.clang-format ./
+sed -i "s/(project)/${project}/g" CMakeLists.txt
