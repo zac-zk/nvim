@@ -85,5 +85,5 @@ function MagicSave()
     else
         vim.fn.execute("w")
     end
-    vim.lsp.buf.format()
+    -- vim.lsp.buf.format()
 end
